@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+
+{% block content %}
+    <h1> Hello World! </h1>
+    {% for room in rooms %}
+        <h2>{{room.title}}</h2>
+        <h2>{{room.price}}</h2>
+    {% endfor %}
+{% endblock %}
